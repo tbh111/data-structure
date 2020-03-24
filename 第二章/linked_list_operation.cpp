@@ -107,13 +107,30 @@ node* delOdd(node* list){
 }
 
 int main(){
-	int num1[6] = {1,4,5,7,8,9};
-	node* La = insertAtHead(6,num1);
+
+	int n, m;
+	
+	printf("input n\n");
+	scanf("%d",&n);
+	int* num1 = (int*)malloc(sizeof(int)*n);
+	printf("input %d numbers\n",n);
+	for(int i=0;i<n;i++){
+		scanf("%d",(num1+i));
+	}
+
+	printf("input m\n");
+	scanf("%d",&m);
+	int* num2 = (int*)malloc(sizeof(int)*m);
+	printf("input %d numbers\n",m);
+	for(int j=0;j<m;j++){
+		scanf("%d",(num2+j));
+	}
+
+	node* La = insertAtHead(n,num1);
 	printf("La : ");
 	printList(La);
-
-	int num2[6] = {2,3,5,6,8,9};
-	node* Lb = insertAtTail(6,num2);
+	
+	node* Lb = insertAtTail(m,num2);
 	printf("Lb : ");
 	printList(Lb);
 
